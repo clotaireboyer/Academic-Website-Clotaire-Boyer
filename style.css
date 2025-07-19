@@ -235,3 +235,39 @@ a:hover {
         height: auto;
     }
 }
+
+
+.teaching-content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.teaching-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.teaching-content h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1.5em;
+    text-align: center;
+    color: #666;
+}
+
+.teaching-weeks {
+    list-style: none;
+    padding-left: 0;
+    line-height: 2;
+    font-size: 1.1rem;
+}
+
+.teaching-weeks li a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.teaching-weeks li a:hover {
+    text-decoration: underline;
+}
