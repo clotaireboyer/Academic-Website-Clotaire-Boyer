@@ -8,6 +8,54 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.png" type="image/png" />
   <style>
+    nav {
+      max-width: 900px;
+      margin: 1rem auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0, 128, 0, 0.1);
+      padding: 0.5rem 1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+   nav ul li a {
+  text-decoration: none;
+  color: #2a7f2a !important; /* force la couleur verte */
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 0 4px rgba(42, 127, 42, 0.2);
+  user-select: none;
+  white-space: nowrap;
+}
+
+
+   nav ul li a:hover {
+  background-color: #e6f4e6; /* vert très clair */
+  color: #1f5e1f;
+  box-shadow: 0 0 6px rgba(42, 127, 42, 0.4);
+}
+
+nav ul li a.active {
+  background-color: #d0f0d0; /* vert pâle */
+  color: #2a7f2a;
+  border-color: #2a7f2a;
+  box-shadow: 0 0 8px rgba(42, 127, 42, 0.6);
+  pointer-events: none;
+}
+
     .main-content {
       max-width: 1000px;
       margin: 2rem auto 3rem;
@@ -30,20 +78,20 @@
     .name-container {
       display: flex;
       flex-direction: column;
-      gap: 0.1rem;
-      width: fit-content;
-      user-select: none;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 600px;
     }
 
     .first-name,
     .last-name {
-      font-size: 5.2rem;
+      font-size: clamp(2rem, 7vw, 5.2rem);
       line-height: 1;
       margin: 0;
       padding: 0;
       font-weight: bold;
       color: #222;
-      min-width: 14ch;
+      width: 100%;
       text-align: left;
     }
 
@@ -104,10 +152,23 @@
     }
 
     @media (max-width: 900px) {
+      nav {
+        max-width: 100%;
+        margin: 1rem 1rem;
+        padding: 0.5rem 1rem;
+      }
+
+      nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
       .main-content {
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
+        padding: 0 1rem;
       }
 
       .content-left {
@@ -116,12 +177,12 @@
       }
 
       .name-container {
-        text-align: center;
+        align-items: center;
       }
 
       .first-name,
       .last-name {
-        font-size: 3.6rem;
+        font-size: clamp(2rem, 10vw, 4.5rem);
         text-align: center;
       }
 
@@ -148,7 +209,7 @@
   <header>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="Academic_CV-5.pdf" target="_blank">CV</a></li>
         <li><a href="research.html">Research</a></li>
         <li><a href="data.html">Data/Program</a></li>
@@ -161,8 +222,8 @@
   <div class="main-content">
     <div class="content-left">
       <div class="name-container">
-        <div class="first-name">CLOTAIRE BOYER</div>
-        <div class="last-name"></div>
+        <div class="first-name">CLOTAIRE</div>
+        <div class="last-name">BOYER</div>
       </div>
     </div>
     <div class="content-right">
