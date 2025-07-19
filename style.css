@@ -120,19 +120,34 @@ a:hover {
 }
 
 .overlay-section {
-    position: relative;
-    height: 400px;
-    background-image: url('fondConferenceClot.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  position: relative;
+  height: 400px;
+  min-height: 300px;
+  background-image: url('fondConferenceClot.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
+@media (max-width: 1200px) {
+  .overlay-section {
+    height: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay-section {
+    height: 600px;
+  }
+}
+
+
 
 .overlay-section::before {
     content: "";
     position: absolute;
     inset: 0;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(70, 70, 70, 0.5);
     z-index: 1;
 }
 
@@ -150,7 +165,7 @@ a:hover {
 }
 
 .text-section {
-    max-width: 700px;
+    max-width: 40%;
     margin: 20px auto; 
     background-color: #ffffff;
     border: 2px solid #ddd;
@@ -444,3 +459,54 @@ a:hover {
     height: 100%;
     border: none;
 }
+
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about-text {
+    flex: 1 1 60%;
+    min-width: 300px;
+}
+
+.about-image {
+    flex: 1 1 35%;
+    min-width: 250px;
+    max-width: 400px;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.about-text {
+    flex: 1 1 48%;
+    min-width: 280px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
