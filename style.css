@@ -271,3 +271,141 @@ a:hover {
 .teaching-weeks li a:hover {
     text-decoration: underline;
 }
+
+.teaching-content {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.teaching-content h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.teaching-content h3 {
+    font-size: 1.5em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.teaching-weeks {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.teaching-weeks li {
+    background-color: #f7f7f7;
+    border-left: 5px solid #333;
+    padding: 12px 16px;
+    margin-bottom: 12px;
+    transition: background-color 0.2s ease;
+}
+
+.teaching-weeks li:hover {
+    background-color: #e0e0e0;
+}
+
+.teaching-weeks a {
+    text-decoration: none;
+    color: #007acc;
+    font-weight: bold;
+}
+
+.teaching-weeks a:hover {
+    text-decoration: underline;
+}
+
+.teaching-content h2 {
+    font-size: 2em;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.teaching-content h4 {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.teaching-content p a {
+    color: #007acc;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.teaching-content p a:hover {
+    text-decoration: underline;
+}
+.office-hours {
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.office-hours table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1em;
+    background-color: #fafafa;
+    border: 1px solid #ddd;
+}
+
+.office-hours th,
+.office-hours td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+.office-hours th {
+    background-color: #f0f0f0;
+    color: #333;
+    font-weight: bold;
+}
+
+.office-hours tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.booking-note {
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.booking-note a {
+    color: #007acc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.booking-note a:hover {
+    text-decoration: underline;
+}
+.office-location {
+    margin-top: 30px;
+}
+
+.office-location h3 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.office-location p {
+    font-size: 1em;
+    margin-bottom: 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.map-container {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
