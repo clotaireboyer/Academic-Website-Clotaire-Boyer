@@ -45,6 +45,44 @@ iframe {
 a, strong {
     word-break: break-word;
 }
+.teaching-weeks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.week-item {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+.clickable-week {
+    padding: 10px 15px;
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+.clickable-week a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.slide-preview {
+    padding: 0;
+    margin: 0;
+    background-color: white;
+}
+
+.slide-preview iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+    display: block;
+}
+
 
 </style>
 
@@ -65,7 +103,7 @@ function toggleSlide(el) {
                 <li><a href="research.html">Research</a></li>
                 <li><a href="data.html">Data/Program</a></li>
                 <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="cinema.html">Cinema</a></li>
+                <li><a href="meetme.html">Meet Me</a></li>
             </ul>
         </nav>
     </header>
@@ -74,57 +112,157 @@ function toggleSlide(el) {
         <h1>Upper-Division Microeconomics</h1>
         <h3>Fall 2025</h3>
 
-        <ul class="teaching-weeks">
-                    <li class="week-item">
-                <div class="clickable-week" onclick="toggleSlide(this)">
-                    <strong>Week 1 – 
-                        <a href="pdf_test.pdf" 
-                        target="_blank" 
-                        onclick="event.stopPropagation();">
-                            Course on Microeconomics
-                        </a>
-                    </strong>
-                </div>
-                <div class="slide-preview responsive-pdf" style="display:none;">
-    <iframe src="pdf_test.pdf"></iframe>
-</div>
+        
+<ul class="teaching-weeks">
+  <li class="week-item">
+    <div class="clickable-week" onclick="toggleSlide(this)">
+      <strong>Week 1 –
+        <a href="week1.pdf" target="_blank" onclick="event.stopPropagation();">
+          Course 1
+        </a>
+      </strong>
+    </div>
+    <div class="slide-preview" style="display:none;">
+      <iframe src="week1.pdf"></iframe>
+    </div>
+  </li>
+  <li class="week-item">
+    <div class="clickable-week" onclick="toggleSlide(this)">
+      <strong>Week 2 –
+        <a href="week2.pdf" target="_blank" onclick="event.stopPropagation();">
+          Course 2
+        </a>
+      </strong>
+    </div>
+    <div class="slide-preview" style="display:none;">
+      <iframe src="week2.pdf"></iframe>
+    </div>
+  </li>
+  <li class="week-item">
+    <div class="clickable-week" onclick="toggleSlide(this)">
+      <strong>Week 3 –
+        <a href="week3.pdf" target="_blank" onclick="event.stopPropagation();">
+          Course 3
+        </a>
+      </strong>
+    </div>
+    <div class="slide-preview" style="display:none;">
+      <iframe src="week3.pdf"></iframe>
+    </div>
+  </li>
+  <li class="week-item">
+    <div class="clickable-week" onclick="toggleSlide(this)">
+      <strong>Week 4 –
+        <a href="week4.pdf" target="_blank" onclick="event.stopPropagation();">
+          Course 4
+        </a>
+      </strong>
+    </div>
+    <div class="slide-preview" style="display:none;">
+      <iframe src="week4.pdf"></iframe>
+    </div>
+  </li>
+  <li class="week-item">
+    <div class="clickable-week" onclick="toggleSlide(this)">
+      <strong>Week 5 –
+        <a href="week5.pdf" target="_blank" onclick="event.stopPropagation();">
+          Course 5
+        </a>
+      </strong>
+    </div>
+    <div class="slide-preview" style="display:none;">
+      <iframe src="week5.pdf"></iframe>
+    </div>
+  </li>
+  <li class="week-item">
+    <div class="clickable-week" onclick="toggleSlide(this)">
+      <strong>Week 6 –
+        <a href="week6.pdf" target="_blank" onclick="event.stopPropagation();">
+          Course 6
+        </a>
+      </strong>
+    </div>
+    <div class="slide-preview" style="display:none;">
+      <iframe src="week6.pdf"></iframe>
+    </div>
+  </li>
+  <li class="week-item">
+    <div class="clickable-week" onclick="toggleSlide(this)">
+      <strong>Week 7 –
+        <a href="week7.pdf" target="_blank" onclick="event.stopPropagation();">
+          Course 7
+        </a>
+      </strong>
+    </div>
+    <div class="slide-preview" style="display:none;">
+      <iframe src="week7.pdf"></iframe>
+    </div>
+  </li>
+  <li class="week-item">
+    <div class="clickable-week" onclick="toggleSlide(this)">
+      <strong>Week 8 –
+        <a href="week8.pdf" target="_blank" onclick="event.stopPropagation();">
+          Course 8
+        </a>
+      </strong>
+    </div>
+    <div class="slide-preview" style="display:none;">
+      <iframe src="week8.pdf"></iframe>
+    </div>
+  </li>
+  <li class="week-item">
+    <div class="clickable-week" onclick="toggleSlide(this)">
+      <strong>Week 9 –
+        <a href="week9.pdf" target="_blank" onclick="event.stopPropagation();">
+          Course 9
+        </a>
+      </strong>
+    </div>
+    <div class="slide-preview" style="display:none;">
+      <iframe src="week9.pdf"></iframe>
+    </div>
+  </li>
+  <li class="week-item">
+    <div class="clickable-week" onclick="toggleSlide(this)">
+      <strong>Week 10 –
+        <a href="week10.pdf" target="_blank" onclick="event.stopPropagation();">
+          Course 10
+        </a>
+      </strong>
+    </div>
+    <div class="slide-preview" style="display:none;">
+      <iframe src="week10.pdf"></iframe>
+    </div>
+  </li>
+  <li class="week-item">
+    <div class="clickable-week" onclick="toggleSlide(this)">
+      <strong>Week 11 –
+        <a href="week11.pdf" target="_blank" onclick="event.stopPropagation();">
+          Course 11
+        </a>
+      </strong>
+    </div>
+    <div class="slide-preview" style="display:none;">
+      <iframe src="week11.pdf"></iframe>
+    </div>
+  </li>
+  <li class="week-item">
+    <div class="clickable-week" onclick="toggleSlide(this)">
+      <strong>Week 12 –
+        <a href="week12.pdf" target="_blank" onclick="event.stopPropagation();">
+          Course 12
+        </a>
+      </strong>
+    </div>
+    <div class="slide-preview" style="display:none;">
+      <iframe src="week12.pdf"></iframe>
+    </div>
+  </li>
+</ul>
 
-            </li>
 
 
 
-                        <li class="week-item">
-                <div class="clickable-week" onclick="toggleSlide(this)">
-                    <strong>Week 2 – 
-                        <a href="https://docs.google.com/presentation/d/e/2PACX-1vTV5U83OixOzPxFJGBNHzR8Ocla2nCdumNsm2HRrAEeMxOx9J4trzxx8lCKwMpKgFH5Z5dGTTVKO2V2/pubembed?" 
-                        target="_blank" 
-                        onclick="event.stopPropagation();">
-                            Section Material
-                        </a>
-                    </strong>
-                </div>
-                <div class="slide-preview" style="display:none;">
-                    <iframe 
-                        src="https://docs.google.com/presentation/d/e/2PACX-1vTV5U83OixOzPxFJGBNHzR8Ocla2nCdumNsm2HRrAEeMxOx9J4trzxx8lCKwMpKgFH5Z5dGTTVKO2V2/pubembed?" 
-                        frameborder="0" 
-                        width="100%" 
-                        height="400" 
-                        allowfullscreen>
-                    </iframe>
-                </div>
-            </li>
-
-            <li>Week 3 – <a href="#">Section Material to be added</a></li>
-            <li>Week 4 – <a href="#">Section Material to be added</a></li>
-            <li>Week 5 – <a href="#">Section Material to be added</a></li>
-            <li>Week 6 – <a href="#">Section Material to be added</a></li>
-            <li>Week 7 – <a href="#">Section Material to be added</a></li>
-            <li>Week 8 – <a href="#">Section Material to be added</a></li>
-            <li>Week 9 – <a href="#">Section Material to be added</a></li>
-            <li>Week 10 – <a href="#">Section Material to be added</a></li>
-            <li>Week 11 – <a href="#">Section Material to be added</a></li>
-            <li>Week 12 – <a href="#">Section Material to be added</a></li>
-        </ul>
 
         <h2>Office Hours</h2>
             <div class="office-hours">
@@ -167,7 +305,7 @@ function toggleSlide(el) {
             <div class="map-container">
               <iframe
                 width="100%"
-                height="300"
+                height="100%"
                 style="border:0"
                 loading="lazy"
                 allowfullscreen
