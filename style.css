@@ -175,3 +175,63 @@ a:hover {
         max-width: 100%;
     }
 }
+
+
+
+
+.research-section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.research-item {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.research-item.reverse {
+    flex-direction: row-reverse;
+}
+
+.research-item img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+}
+
+.research-text {
+    flex: 1;
+}
+
+.research-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.research-text p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .research-item {
+        flex-direction: column !important;
+        text-align: center;
+    }
+
+    .research-item img {
+        width: 90%;
+        height: auto;
+    }
+}
