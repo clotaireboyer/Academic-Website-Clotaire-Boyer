@@ -6,7 +6,56 @@
     <title>Teaching</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon.png" type="image/png">
+    <style>
+.teaching-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+body, main {
+    width: 100%;
+    max-width: none;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    overflow-x: hidden;
+}
+
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+.teaching-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.slide-preview iframe {
+    width: 100%;
+    height: 500px;
+}
+
+a, strong {
+    word-break: break-word;
+}
+
+</style>
+
 </head>
+<script>
+function toggleSlide(el) {
+    const preview = el.nextElementSibling;
+    preview.style.display = preview.style.display === "none" ? "block" : "none";
+}
+</script>
+
 <body>
     <header>
         <nav>
@@ -26,8 +75,45 @@
         <h3>Fall 2025</h3>
 
         <ul class="teaching-weeks">
-           <li>Week 1 – <a href="https://docs.google.com" target="_blank">Course on micro economics</a></li>
-            <li>Week 2 – <a href="https://docs.google.com" target="_blank">Section Material</a></li>
+                    <li class="week-item">
+                <div class="clickable-week" onclick="toggleSlide(this)">
+                    <strong>Week 1 – 
+                        <a href="pdf_test.pdf" 
+                        target="_blank" 
+                        onclick="event.stopPropagation();">
+                            Course on Microeconomics
+                        </a>
+                    </strong>
+                </div>
+                <div class="slide-preview responsive-pdf" style="display:none;">
+    <iframe src="pdf_test.pdf"></iframe>
+</div>
+
+            </li>
+
+
+
+                        <li class="week-item">
+                <div class="clickable-week" onclick="toggleSlide(this)">
+                    <strong>Week 2 – 
+                        <a href="https://docs.google.com/presentation/d/e/2PACX-1vTV5U83OixOzPxFJGBNHzR8Ocla2nCdumNsm2HRrAEeMxOx9J4trzxx8lCKwMpKgFH5Z5dGTTVKO2V2/pubembed?" 
+                        target="_blank" 
+                        onclick="event.stopPropagation();">
+                            Section Material
+                        </a>
+                    </strong>
+                </div>
+                <div class="slide-preview" style="display:none;">
+                    <iframe 
+                        src="https://docs.google.com/presentation/d/e/2PACX-1vTV5U83OixOzPxFJGBNHzR8Ocla2nCdumNsm2HRrAEeMxOx9J4trzxx8lCKwMpKgFH5Z5dGTTVKO2V2/pubembed?" 
+                        frameborder="0" 
+                        width="100%" 
+                        height="400" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </li>
+
             <li>Week 3 – <a href="#">Section Material to be added</a></li>
             <li>Week 4 – <a href="#">Section Material to be added</a></li>
             <li>Week 5 – <a href="#">Section Material to be added</a></li>
@@ -80,16 +166,14 @@
 
             <div class="map-container">
               <iframe
-  width="100%"
-  height="300"
-  style="border:0"
-  loading="lazy"
-  allowfullscreen
-  referrerpolicy="no-referrer-when-downgrade"
-  src="https://www.google.com/maps?q=Evans+Hall,+University+of+California,+Berkeley,+CA&output=embed">
-</iframe>
-
-
+                width="100%"
+                height="300"
+                style="border:0"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=Evans+Hall,+University+of+California,+Berkeley,+CA&output=embed">
+                </iframe>
             </div>
 </div>
 
