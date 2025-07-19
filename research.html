@@ -1,76 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Research</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.png" type="image/png">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+
+  <style>
+    /* NAVIGATION */
+    nav {
+      max-width: 900px;
+      margin: 1rem auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0, 128, 0, 0.1);
+      padding: 0.5rem 1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #2a7f2a !important; /* vert permanent */
+      background-color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      display: inline-block;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid transparent;
+      box-shadow: 0 0 4px rgba(42, 127, 42, 0.2);
+    }
+
+    nav ul li a:hover {
+      background-color: #e6f4e6;
+      color: #1f5e1f !important;
+      box-shadow: 0 0 6px rgba(42, 127, 42, 0.4);
+    }
+
+    nav ul li a.active {
+      background-color: #d0f0d0;
+      color: #2a7f2a !important;
+      border-color: #2a7f2a;
+      box-shadow: 0 0 8px rgba(42, 127, 42, 0.6);
+      pointer-events: none;
+    }
+
+    /* SECTION RECHERCHE */
+    .research-section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .research-item {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .research-item.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .research-item img {
+      max-width: 350px;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      flex-shrink: 0;
+    }
+
+    .research-text {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .research-text h2 {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .research-text p {
+      margin-top: 0;
+      color: #555;
+      font-style: italic;
+    }
+
+    footer {
+      padding: 1.5rem;
+      text-align: center;
+      margin-top: 4rem;
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      transform: translateX(-50%);
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    footer ul li a {
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    footer ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav {
+        max-width: 100%;
+        margin: 1rem;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .research-item {
+        flex-direction: column !important;
+        align-items: flex-start;
+      }
+
+      .research-item img {
+        max-width: 100%;
+      }
+
+      .research-text {
+        min-width: auto;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="Academic_CV-5.pdf" target="_blank">CV</a></li>
-                <li><a href="research.html">Research</a></li>
-                <li><a href="data.html">Data/Program</a></li>
-                <li><a href="teaching.html">Teaching</a></li>
-                <li><a href="meetme.html">Meet Me</a></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="research-section">
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Academic_CV-5.pdf" target="_blank">CV</a></li>
+        <li><a href="research.html" class="active">Research</a></li>
+        <li><a href="data.html">Data/Program</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="meetme.html">Meet Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="research-section">
     <div class="research-item">
-        <img src="images/mongolie_place.jpeg" alt="mongolie1">
-        <div class="research-text">
-            <h2> Predicting and Addressing Poverty in Real-time: Evidence from Mongolia’s VAT system</h2>
-            <p>with Pierre Bachas</p>
-        </div>
+      <img src="images/mongolie_place.jpeg" alt="mongolie1" />
+      <div class="research-text">
+        <h2>Predicting and Addressing Poverty in Real-time: Evidence from Mongolia’s VAT system</h2>
+        <p>with Pierre Bachas</p>
+      </div>
     </div>
 
     <div class="research-item reverse">
-        <img src="images/rdc2.jpeg" alt="rdc2">
-        <div class="research-text">
-            <h2>Bargaining over Taxes: Experimental Evidence from the DR. Congo</h2>
-            <p></p>
-        </div>
+      <img src="images/rdc2.jpeg" alt="rdc2" />
+      <div class="research-text">
+        <h2>Bargaining over Taxes: Experimental Evidence from the DR. Congo</h2>
+        <p></p>
+      </div>
     </div>
 
     <div class="research-item">
-        <img src="images/rdc1.jpeg" alt="rdc1">
-        <div class="research-text">
-            <h2>Prosperity Faith in Weak States: Randomized Evidence on Tax Collection in the DRC</h2>
-            <p>with G. Granato, J. Weigel</p>
-        </div>
+      <img src="images/rdc1.jpeg" alt="rdc1" />
+      <div class="research-text">
+        <h2>Prosperity Faith in Weak States: Randomized Evidence on Tax Collection in the DRC</h2>
+        <p>with G. Granato, J. Weigel</p>
+      </div>
     </div>
 
     <div class="research-item reverse">
-        <img src="images/separation.jpg" alt="separation">
-        <div class="research-text">
-            <h2>Church-State Competition in Industrializing France</h2>
-            <p></p>
-        </div>
+      <img src="images/separation.jpg" alt="separation" />
+      <div class="research-text">
+        <h2>Church-State Competition in Industrializing France</h2>
+        <p></p>
+      </div>
     </div>
-    <!-- >
-    <div class="research-item">
-        <div class="research-text">
-            <h2>Can Cities Provide Social Protection Alone? Spatial Dynamics of Homelessness Prevention in the Bay Area</h2>
-            <p>with A.-H. Nguyen</p>
-        </div>
-    </div>
-    -->
-</div>
+  </div>
 
-    <footer>
-        <p>Connect with me:</p>
-        <ul>
-            <li><a href="https://www.linkedin.com/in/clotaireboyer/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://twitter.com/boyerclotaire" target="_blank">Twitter</a></li>
-            <li><a href="https://github.com/clotaireboyer" target="_blank">GitHub</a></li>
-            <li><a href="mailto:cboyer3@worldbank.org">cboyer3@worldbank.org</a></li>
-            <li><a href="mailto:clotaire.boyer@berkeley.edu">clotaire.boyer@berkeley.edu</a></li>
-        </ul>
-    </footer>
+  <footer>
+    <p>Connect with me:</p>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/clotaireboyer/" target="_blank">LinkedIn</a></li>
+      <li><a href="https://twitter.com/boyerclotaire" target="_blank">Twitter</a></li>
+      <li><a href="https://github.com/clotaireboyer" target="_blank">GitHub</a></li>
+      <li><a href="mailto:cboyer3@worldbank.org">cboyer3@worldbank.org</a></li>
+      <li><a href="mailto:clotaire.boyer@berkeley.edu">clotaire.boyer@berkeley.edu</a></li>
+    </ul>
+  </footer>
 </body>
 </html>
