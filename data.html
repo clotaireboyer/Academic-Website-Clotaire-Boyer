@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data / Program</title>
+  <meta name="description" content="Replication packages and data programs by Clotaire Boyer." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <style>
+  body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: sans-serif;
+  }
+
+  nav {
+    max-width: 900px;
+    margin: 1rem auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 6px rgba(0, 128, 0, 0.1);
+    padding: 0.5rem 1rem;
+  }
+
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: #2a7f2a !important;
+    background-color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-weight: 600;
+    display: inline-block;
+    border: 2px solid transparent;
+    box-shadow: 0 0 4px rgba(42, 127, 42, 0.2);
+    user-select: none;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  nav ul li a:hover {
+    background-color: #e6f4e6;
+    color: #1f5e1f;
+    box-shadow: 0 0 6px rgba(42, 127, 42, 0.4);
+  }
+
+  nav ul li a.active {
+    background-color: #d0f0d0;
+    color: #2a7f2a;
+    border-color: #2a7f2a;
+    box-shadow: 0 0 8px rgba(42, 127, 42, 0.6);
+    pointer-events: none;
+  }
+
+  .main-section {
+    flex: 1;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  .main-section h1 {
+    color: #2a7f2a;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .main-section ul {
+    padding-left: 1.5rem;
+  }
+
+  .main-section li {
+    margin-bottom: 0.75rem;
+    font-size: 1.1rem;
+  }
+
+  footer {
+    background-color: #639b76;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: auto;
+  }
+
+  footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  footer ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  footer ul li a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 900px) {
+    nav {
+      max-width: 100%;
+      margin: 1rem;
+      padding: 0.5rem 1rem;
+    }
+
+    nav ul {
+      justify-content: center;
+      gap: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Academic_CV-5.pdf" target="_blank">CV</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="data.html" class="active">Data/Program</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="meetme.html">Meet Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-section">
+    <h1>Data / Program</h1>
+    <ul>
+      <li>Replication package for Project A</li>
+      <li>Replication package for Project B</li>
+      <li>Replication package for Project C</li>
+      <li>Replication package for Project D</li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>Connect with me:</p>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/clotaireboyer/" target="_blank">LinkedIn</a></li>
+      <li><a href="https://twitter.com/boyerclotaire" target="_blank">Twitter</a></li>
+      <li><a href="https://github.com/clotaireboyer" target="_blank">GitHub</a></li>
+      <li><a href="mailto:cboyer3@worldbank.org">cboyer3@worldbank.org</a></li>
+      <li><a href="mailto:clotaire.boyer@berkeley.edu">clotaire.boyer@berkeley.edu</a></li>
+    </ul>
+  </footer>
+</body>
+</html>
