@@ -8,14 +8,207 @@
   <link rel="stylesheet" href="style.css" />
   <style>
     body {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  font-family: sans-serif;
-}
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: sans-serif;
+    }
 
-nav {
+    nav {
+      max-width: 900px;
+      margin: 1rem auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0, 128, 0, 0.1);
+      padding: 0.5rem 1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #2a7f2a !important;
+      background-color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      display: inline-block;
+      border: 2px solid transparent;
+      box-shadow: 0 0 4px rgba(42, 127, 42, 0.2);
+      user-select: none;
+      white-space: nowrap;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+
+    nav ul li a:hover {
+      background-color: #e6f4e6;
+      color: #1f5e1f;
+      box-shadow: 0 0 6px rgba(42, 127, 42, 0.4);
+    }
+
+    nav ul li a.active {
+      background-color: #d0f0d0;
+      color: #2a7f2a;
+      border-color: #2a7f2a;
+      box-shadow: 0 0 8px rgba(42, 127, 42, 0.6);
+      pointer-events: none;
+    }
+
+    .research-tabs {
+      position: fixed;
+      top: 70px;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 1rem;
+      background: white;
+      padding: 1rem 20px;
+      border-radius: 12px 0 0 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      z-index: 999;
+      max-width: none;
+      width: auto;
+      margin: 0;
+    }
+
+    .research-tabs .tab-button {
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 750;
+      border-radius: 10px;
+      border: 2px solid #2a7f2a;
+      background-color: #fff;
+      color: #2a7f2a;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 4px rgba(42, 127, 42, 0.25);
+      width: 160px;
+      height: 56px;
+      text-align: center;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .research-tabs .tab-button:hover {
+      background-color: #e6f4e6;
+      color: #1f5e1f;
+      box-shadow: 0 0 8px rgba(42, 127, 42, 0.6);
+    }
+
+    .research-tabs .tab-button.active {
+      background-color: #2a7f2a;
+      color: #fff;
+      cursor: default;
+      pointer-events: none;
+      box-shadow: 0 0 12px rgba(42, 127, 42, 0.9);
+    }
+
+    .research-section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .research-section h2 {
+      margin-top: 2rem;
+      color: #2a7f2a;
+    }
+
+    .research-section p {
+      text-align: justify;
+    }
+
+    .section-title {
+      color: #2a7f2a;
+      font-size: 3.2rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .research-text h2 {
+      color: #000;
+    }
+
+    footer {
+      background-color: #639b76;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: auto;
+    }
+
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+
+    footer ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    footer ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    footer ul li a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        max-width: 100%;
+        margin: 1rem;
+        padding: 0.5rem 1rem;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .research-tabs {
+        position: static;
+        max-width: 1000px;
+        margin: 0 auto 2rem;
+        width: auto;
+        flex-direction: row !important;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 0.5rem;
+        gap: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      }
+
+      .research-tabs .tab-button {
+        height: 56px;
+      }
+    }
+    nav {
   max-width: 900px;
   margin: 1rem auto;
   background: #fff;
@@ -31,7 +224,6 @@ nav ul {
   display: flex;
   gap: 1.5rem;
   justify-content: center;
-  flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -42,12 +234,11 @@ nav ul li a {
   border-radius: 6px;
   font-weight: 600;
   display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid transparent;
   box-shadow: 0 0 4px rgba(42, 127, 42, 0.2);
   user-select: none;
   white-space: nowrap;
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
 }
 
 nav ul li a:hover {
@@ -64,152 +255,7 @@ nav ul li a.active {
   pointer-events: none;
 }
 
-.research-tabs {
-  position: fixed;
-  top: 70px;
-  right: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 1rem;
-  background: white;
-  padding: 1rem 20px;
-  border-radius: 12px 0 0 12px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  z-index: 999;
-  max-width: none;
-  width: auto;
-  margin: 0;
-}
-
-.tab-button {
-  padding: 0.6rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 750;
-  border-radius: 10px;
-  border: 2px solid #2a7f2a;
-  background-color: #fff;
-  color: #2a7f2a;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 4px rgba(42, 127, 42, 0.25);
-  width: 160px;
-  height: 56px;
-  text-align: center;
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.tab-button:hover {
-  background-color: #e6f4e6;
-  color: #1f5e1f;
-  box-shadow: 0 0 8px rgba(42, 127, 42, 0.6);
-}
-
-.tab-button.active {
-  background-color: #2a7f2a;
-  color: #fff;
-  cursor: default;
-  pointer-events: none;
-  box-shadow: 0 0 12px rgba(42, 127, 42, 0.9);
-}
-
-.research-section {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-.research-section h2 {
-  margin-top: 2rem;
-  color: #2a7f2a;
-}
-
-.research-section p {
-  text-align: justify;
-}
-
-.section-title {
-  color: #2a7f2a;
-  font-size: 3.2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  margin-top: 3rem;
-  text-align: center;
-}
-
-footer {
-  background-color: #639b76;
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: auto;
-}
-
-footer p {
-  margin-bottom: 0.5rem;
-}
-
-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 0;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-footer ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-footer ul li a:hover {
-  text-decoration: underline;
-}
-
-.research-text h2 {
-  color: #000;
-}
-
-@media (max-width: 900px) {
-  nav {
-    max-width: 100%;
-    margin: 1rem;
-    padding: 0.5rem 1rem;
-  }
-
-  nav ul {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  .research-tabs {
-    position: static;
-    max-width: 1000px;
-    margin: 0 auto 2rem;
-    width: auto;
-    flex-direction: row !important;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem 0.5rem;
-    gap: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  }
-
-  .tab-button {
-    height: 56px;
-  }
-}
-
-</style>
-
-
+  </style>
 </head>
 <body>
   <header>
@@ -268,8 +314,6 @@ footer ul li a:hover {
 
     <h1 class="section-title" id="publications">Publications</h1>
 
-    
-    
     <div class="research-item">
        <img src="images/" alt="1st publication" />
       <div class="research-text">
@@ -277,30 +321,6 @@ footer ul li a:hover {
       </div>
     </div>
 
-    <!--
-    <div class="research-item reverse">
-      <img src="images/rdc1.jpeg" alt="rdc1" />
-      <div class="research-text">
-        <h2><a href="week2.pdf" target="_blank">This is the second published paper 2</a></h2>
-      </div>
-    </div>
-
-    <div class="research-item">
-      <img src="images/rdc1.jpeg" alt="rdc1" />
-      <div class="research-text">
-        <h2><a href="week1.pdf" target="_blank">Title of Published Paper 1</a></h2>
-      </div>
-    </div>
-
-    <div class="research-item reverse">
-      <img src="images/rdc1.jpeg" alt="rdc1" />
-      <div class="research-text">
-        <h2><a href="week2.pdf" target="_blank">This is the second published paper 2</a></h2>
-      </div>
-    </div>
-
-
-    -->
   </div>
 
   <footer>
@@ -315,43 +335,43 @@ footer ul li a:hover {
   </footer>
 
   <script>
-  const buttons = document.querySelectorAll('.tab-button');
-  const sections = {
-    '#working-papers': document.querySelector('#working-papers'),
-    '#publications': document.querySelector('#publications')
-  };
+    const buttons = document.querySelectorAll('.tab-button');
+    const sections = {
+      '#working-papers': document.querySelector('#working-papers'),
+      '#publications': document.querySelector('#publications')
+    };
 
-  function activateButton(targetId) {
-    buttons.forEach(b => {
-      if (b.getAttribute('data-target') === targetId) {
-        b.classList.add('active');
-      } else {
-        b.classList.remove('active');
-      }
-    });
-  }
-
-  buttons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const targetId = btn.getAttribute('data-target');
-      const targetElem = document.querySelector(targetId);
-      if (targetElem) {
-        targetElem.scrollIntoView({ behavior: 'smooth' });
-        activateButton(targetId);
-      }
-    });
-  });
-
-  window.addEventListener('scroll', () => {
-    const scrollPos = window.scrollY + window.innerHeight / 3;
-
-    if (sections['#publications'].offsetTop <= scrollPos) {
-      activateButton('#publications');
-    } else if (sections['#working-papers'].offsetTop <= scrollPos) {
-      activateButton('#working-papers');
+    function activateButton(targetId) {
+      buttons.forEach(b => {
+        if (b.getAttribute('data-target') === targetId) {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
     }
-  });
-</script>
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.getAttribute('data-target');
+        const targetElem = document.querySelector(targetId);
+        if (targetElem) {
+          targetElem.scrollIntoView({ behavior: 'smooth' });
+          activateButton(targetId);
+        }
+      });
+    });
+
+    window.addEventListener('scroll', () => {
+      const scrollPos = window.scrollY + window.innerHeight / 3;
+
+      if (sections['#publications'].offsetTop <= scrollPos) {
+        activateButton('#publications');
+      } else if (sections['#working-papers'].offsetTop <= scrollPos) {
+        activateButton('#working-papers');
+      }
+    });
+  </script>
 
 </body>
 </html>
