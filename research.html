@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Research</title>
   <link rel="icon" href="favicon.png" type="image/png" />
-    <link rel="stylesheet" href="style.css" />
-
+  <link rel="stylesheet" href="style.css" />
   <style>
-    /* NAVIGATION */
     nav {
       max-width: 900px;
       margin: 1rem auto;
@@ -29,7 +27,7 @@
 
     nav ul li a {
       text-decoration: none;
-      color: #2a7f2a !important; /* vert permanent */
+      color: #2a7f2a !important;
       background-color: #fff;
       padding: 0.5rem 1rem;
       border-radius: 6px;
@@ -54,7 +52,6 @@
       pointer-events: none;
     }
 
-    /* SECTION RECHERCHE */
     .research-section {
       max-width: 1000px;
       margin: 2rem auto;
@@ -62,6 +59,15 @@
       display: flex;
       flex-direction: column;
       gap: 2.5rem;
+    }
+
+    .section-title {
+      color: #2a7f2a;
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      margin-top: 3rem;
+      text-align: center;
     }
 
     .research-item {
@@ -87,12 +93,15 @@
     .research-text {
       flex: 1;
       min-width: 250px;
+      font-size: 2.15rem;
+      text-align: justify;
     }
 
     .research-text h2 {
       margin-top: 0;
       margin-bottom: 0.5rem;
       font-weight: 700;
+      font-size: 1.8rem;
       color: #222;
     }
 
@@ -100,6 +109,15 @@
       margin-top: 0;
       color: #555;
       font-style: italic;
+    }
+
+    .publications-list {
+      list-style: disc;
+      padding-left: 2rem;
+      color: #000;
+      font-size: 2.15rem;
+      margin-top: 1rem;
+      text-align: left;
     }
 
     footer {
@@ -132,7 +150,6 @@
       text-decoration: underline;
     }
 
-    /* RESPONSIVE */
     @media (max-width: 900px) {
       nav {
         max-width: 100%;
@@ -174,6 +191,8 @@
   </header>
 
   <div class="research-section">
+    <h1 class="section-title">Working Papers</h1>
+
     <div class="research-item">
       <img src="images/mongolie_place.jpeg" alt="mongolie1" />
       <div class="research-text">
@@ -205,6 +224,12 @@
         <p></p>
       </div>
     </div>
+
+    <h1 class="section-title">Publications</h1>
+    <ul class="publications-list">
+      <li><a href="week1.pdf"  target="_blank">Title of Published Paper 1</a></li>
+      <li><a href="week1.pdf"  target="_blank">This is the second published paper 2</a></li>
+    </ul>
   </div>
 
   <footer>
