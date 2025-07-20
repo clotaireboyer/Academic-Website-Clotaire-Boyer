@@ -7,373 +7,180 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="favicon.png" type="image/png" />
     <style>
-        main {
-            max-width: 1900px;
-            margin: 40px auto;
-            padding: 0 20px;
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-        }
-        iframe {
-            width: 100%;
-            height: 700px;
-            border: none;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        p {
-            max-width: 700px;
-            margin: 20px auto 0 auto;
-            font-size: 1.1rem;
-            color: #555;
-            text-align: center;
-        }
-        .iframe-container {
-    width: 100%;
-    max-width: 1200px; 
-    margin: 0 auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    overflow: hidden;
-}
-
-.iframe-container iframe {
-    width: 100%;
-    height: 700px;
-    border: none;
-    display: block;
-}
-
-@media (max-width: 768px) {
-    .iframe-container iframe {
-        height: 500px;
-    }
-    main {
+body, html {
+  margin: 0;
+  padding: 0;
   width: 100%;
-  max-width: none !important;
-  padding: 0 20px; 
+  max-width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+main {
+  max-width: 1900px;
+  width: 100%;
+  margin: 40px auto;
+  padding: 0 20px;
   box-sizing: border-box;
 }
-body, main {
-      width: 100%;
-      max-width: none;
-    }
 
-    html, body {
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      overflow-x: hidden;
-    }
-
-    nav {
-      max-width: 900px;
-      margin: 1rem auto;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 6px rgba(0, 128, 0, 0.1);
-      padding: 0.5rem 1rem;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #2a7f2a !important;
-      background-color: #fff;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      font-weight: 600;
-      display: inline-block;
-      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-      border: 2px solid transparent;
-      box-shadow: 0 0 4px rgba(42, 127, 42, 0.2);
-    }
-
-    nav ul li a:hover {
-      background-color: #e6f4e6;
-      color: #1f5e1f !important;
-      box-shadow: 0 0 6px rgba(42, 127, 42, 0.4);
-    }
-
-    nav ul li a.active {
-      background-color: #d0f0d0;
-      color: #2a7f2a !important;
-      border-color: #2a7f2a;
-      box-shadow: 0 0 8px rgba(42, 127, 42, 0.6);
-      pointer-events: none;
-    }
-
-    .teaching-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    iframe {
-      max-width: 100%;
-      height: auto;
-    }
-
-    .slide-preview iframe {
-      width: 100%;
-      height: 500px;
-      border: none;
-      display: block;
-    }
-
-    a, strong {
-      word-break: break-word;
-    }
-
-    .teaching-weeks {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .week-item {
-      margin-bottom: 20px;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      background-color: #f9f9f9;
-      overflow: hidden;
-    }
-
-    .clickable-week {
-      padding: 10px 15px;
-      background-color: #e0e0e0;
-      cursor: pointer;
-    }
-
-    .clickable-week a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .slide-preview {
-      padding: 0;
-      margin: 0;
-      background-color: white;
-    }
-
-
-
-   
-
-    footer ul li a:hover {
-      text-decoration: underline;
-    }
+header {
+  background: #fff;
+  padding: 1rem 0;
+  box-shadow: 0 0 6px rgba(0, 128, 0, 0.1);
 }
+
 nav {
-      max-width: 900px;
-      margin: 1rem auto;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 6px rgba(0, 128, 0, 0.1);
-      padding: 0.5rem 1rem;
-    }
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
 
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-    }
+nav {
+  max-width: 900px;
+  margin: 1rem auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 128, 0, 0.1);
+  padding: 0.5rem 1rem;
+}
 
-   nav ul li a {
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
   text-decoration: none;
-  color: #2a7f2a !important; 
+  color: #2a7f2a !important;
   background-color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 6px;
   font-weight: 600;
   display: inline-block;
-  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
   border: 2px solid transparent;
   box-shadow: 0 0 4px rgba(42, 127, 42, 0.2);
   user-select: none;
   white-space: nowrap;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
-
-   nav ul li a:hover {
+nav ul li a:hover {
   background-color: #e6f4e6; 
   color: #1f5e1f;
   box-shadow: 0 0 6px rgba(42, 127, 42, 0.4);
 }
 
 nav ul li a.active {
-  background-color: #d0f0d0;
+  background-color: #d0f0d0; 
   color: #2a7f2a;
   border-color: #2a7f2a;
   box-shadow: 0 0 8px rgba(42, 127, 42, 0.6);
   pointer-events: none;
 }
 
-    .main-content {
-      max-width: 1000px;
-      margin: 2rem auto 3rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 2rem;
-      gap: 4rem;
-    }
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
-    .content-left {
-      flex: 1 1 auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
-      text-align: left;
-    }
+p {
+  max-width: 700px;
+  margin: 20px auto 0;
+  font-size: 1.1rem;
+  color: #555;
+  text-align: center;
+}
 
-    .name-container {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      width: 100%;
-      max-width: 600px;
-    }
+.iframe-container {
+  width: 100%;
+  max-width: 1900px;
+  margin: 0 auto 3rem auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: visible;
+  box-sizing: border-box;
+}
 
-    .first-name,
-    .last-name {
-      font-size: clamp(2rem, 7vw, 5.2rem);
-      line-height: 1;
-      margin: 0;
-      padding: 0;
-      font-weight: bold;
-      color: #222;
-      width: 100%;
-      text-align: left;
-    }
+.iframe-container iframe {
+  width: 100%;
+  height: 700px;
+  border: none;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  min-width: 300px;
+}
 
-    .content-right {
-      flex-shrink: 0;
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      overflow: hidden;
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-    }
+.office-location {
+  max-width: 1200px;
+  margin: 0 auto 4rem auto;
+  padding: 1rem 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-sizing: border-box;
+}
 
-    .content-right img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 50%;
-      display: block;
-    }
+.office-location h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
 
-    .about-container {
-      max-width: 1200px;
-      margin: 0 auto 4rem;
-      padding: 0 1rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: stretch;
-      gap: 2rem;
-    }
+.office-location p {
+  margin: 0;
+  text-align: center;
+  font-size: 1rem;
+  color: #444;
+}
 
-    .about-text,
-    .about-image {
-      background: #fff;
-      border: 1px solid #ccc;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-      padding: 1.5rem;
-      box-sizing: border-box;
-      flex: 1 1 500px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 100%;
-    }
+.map-container {
+  width: 100%;
+  height: 400px;
+  margin-top: 1rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+header {
+  background-color: #639b76; 
+  padding: 1rem 0;
+  box-shadow: 0 0 6px rgba(0, 128, 0, 0.1);
+}
 
-    .about-text h2 {
-      margin-top: 0;
-    }
 
-    .about-image img {
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      display: block;
-    }
+@media (max-width: 900px) {
+  .iframe-container iframe {
+    height: 500px;
+  }
 
-    @media (max-width: 900px) {
-      nav {
-        max-width: 100%;
-        margin: 1rem 1rem;
-        padding: 0.5rem 1rem;
-      }
+  .office-location {
+    padding: 1rem 10px;
+  }
 
-      nav ul {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
+  .map-container {
+    height: 300px;
+  }
 
-      .main-content {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-        padding: 0 1rem;
-      }
+  nav ul {
+    gap: 1rem;
+  }
+}
 
-      .content-left {
-        align-items: center;
-        text-align: center;
-      }
-
-      .name-container {
-        align-items: center;
-      }
-
-      .first-name,
-      .last-name {
-        font-size: clamp(2rem, 10vw, 4.5rem);
-        text-align: center;
-      }
-
-      .content-right {
-        width: 150px;
-        height: 150px;
-      }
-
-      .content-right img {
-        width: 150px;
-        height: 150px;
-      }
-
-      .about-text,
-      .about-image {
-        flex-basis: 100% !important;
-        max-width: 100% !important;
-        height: auto;
-      }
-    }
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+}
 
     </style>
 </head>
@@ -412,7 +219,7 @@ nav ul li a.active {
                 referrerpolicy="no-referrer-when-downgrade"
                 src="https://www.google.com/maps?q=Evans+Hall,+University+of+California,+Berkeley,+CA&output=embed">
                 </iframe>
-            </div>
+            </div></div>
 </main>
 
 
