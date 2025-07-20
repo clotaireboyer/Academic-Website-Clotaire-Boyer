@@ -7,174 +7,181 @@
   <link rel="icon" href="favicon.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    nav {
-      max-width: 900px;
-      margin: 1rem auto;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 6px rgba(0, 128, 0, 0.1);
-      padding: 0.5rem 1rem;
-    }
+  nav {
+  max-width: 900px;
+  margin: 1rem auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 128, 0, 0.1);
+  padding: 0.5rem 1rem;
+}
 
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-    }
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
 
-    nav ul li a {
-      text-decoration: none;
-      color: #2a7f2a !important;
-      background-color: #fff;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      font-weight: 600;
-      display: inline-block;
-      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-      border: 2px solid transparent;
-      box-shadow: 0 0 4px rgba(42, 127, 42, 0.2);
-    }
+nav ul li a {
+  text-decoration: none;
+  color: #2a7f2a !important;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  display: inline-block;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+  box-shadow: 0 0 4px rgba(42, 127, 42, 0.2);
+  user-select: none;
+  white-space: nowrap;
+}
 
-    nav ul li a:hover {
-      background-color: #e6f4e6;
-      color: #1f5e1f !important;
-      box-shadow: 0 0 6px rgba(42, 127, 42, 0.4);
-    }
+nav ul li a:hover {
+  background-color: #e6f4e6;
+  color: #1f5e1f;
+  box-shadow: 0 0 6px rgba(42, 127, 42, 0.4);
+}
 
-    nav ul li a.active {
-      background-color: #d0f0d0;
-      color: #2a7f2a !important;
-      border-color: #2a7f2a;
-      box-shadow: 0 0 8px rgba(42, 127, 42, 0.6);
-      pointer-events: none;
-    }
+nav ul li a.active {
+  background-color: #d0f0d0;
+  color: #2a7f2a;
+  border-color: #2a7f2a;
+  box-shadow: 0 0 8px rgba(42, 127, 42, 0.6);
+  pointer-events: none;
+}
 
-    .research-section {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 2.5rem;
-    }
+.research-tabs {
+  position: fixed;
+  top: 70px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  background: white;
+  padding: 1rem 20px;
+  border-radius: 12px 0 0 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  z-index: 999;
+  max-width: none;
+  width: auto;
+  margin: 0;
+}
 
-    .section-title {
-      color: #2a7f2a;
-      font-size: 2.8rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-      margin-top: 3rem;
-      text-align: center;
-    }
+.tab-button {
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 750;
+  border-radius: 10px;
+  border: 2px solid #2a7f2a;
+  background-color: #fff;
+  color: #2a7f2a;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 4px rgba(42, 127, 42, 0.25);
+  width: 160px;
+  text-align: center;
+  box-sizing: border-box;
+}
 
-    .research-item {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      flex-wrap: wrap;
-    }
 
-    .research-item.reverse {
-      flex-direction: row-reverse;
-    }
+.tab-button:hover {
+  background-color: #e6f4e6;
+  color: #1f5e1f;
+  box-shadow: 0 0 8px rgba(42, 127, 42, 0.6);
+}
 
-    .research-item img {
-      max-width: 350px;
-      width: 100%;
-      height: auto;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      flex-shrink: 0;
-    }
+.tab-button.active {
+  background-color: #2a7f2a;
+  color: #fff;
+  cursor: default;
+  pointer-events: none;
+  box-shadow: 0 0 12px rgba(42, 127, 42, 0.9);
+}
 
-    .research-text {
-      flex: 1;
-      min-width: 250px;
-      font-size: 2.15rem;
-      text-align: justify;
-    }
+.research-section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
 
-    .research-text h2 {
-      margin-top: 0;
-      margin-bottom: 0.5rem;
-      font-weight: 700;
-      font-size: 1.8rem;
-      color: #222;
-    }
+.research-section h2 {
+  margin-top: 2rem;
+  color: #2a7f2a;
+}
 
-    .research-text p {
-      margin-top: 0;
-      color: #555;
-      font-style: italic;
-    }
+.research-section p {
+  text-align: justify;
+}
 
-    .publications-list {
-      list-style: disc;
-      padding-left: 2rem;
-      color: #000;
-      font-size: 2.15rem;
-      margin-top: 1rem;
-      text-align: left;
-    }
+.section-title {
+  color: #2a7f2a;
+  font-size: 3.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  margin-top: 3rem;
+  text-align: center;
+}
 
-    footer {
-      padding: 1.5rem;
-      text-align: center;
-      margin-top: 4rem;
-      width: 100vw;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      transform: translateX(-50%);
-    }
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 2rem 0;
+  background-color: #f8f8f8;
+}
 
-    footer ul {
-      list-style: none;
-      padding: 0;
-      margin: 1rem 0 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-    }
+footer p {
+  margin-bottom: 0.5rem;
+}
 
-    footer ul li a {
-      text-decoration: none;
-      font-weight: 600;
-    }
+footer ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 
-    footer ul li a:hover {
-      text-decoration: underline;
-    }
+footer ul li a {
+  color: #2a7f2a;
+  text-decoration: none;
+}
 
-    @media (max-width: 900px) {
-      nav {
-        max-width: 100%;
-        margin: 1rem;
-      }
+@media (max-width: 900px) {
+  nav {
+    max-width: 100%;
+    margin: 1rem 1rem;
+    padding: 0.5rem 1rem;
+  }
 
-      nav ul {
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
+  nav ul {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 
-      .research-item {
-        flex-direction: column !important;
-        align-items: flex-start;
-      }
+  .research-tabs {
+    position: static;
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+    width: auto;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  }
+}
 
-      .research-item img {
-        max-width: 100%;
-      }
 
-      .research-text {
-        min-width: auto;
-      }
-    }
   </style>
+
 </head>
 <body>
   <header>
@@ -191,7 +198,13 @@
   </header>
 
   <div class="research-section">
-    <h1 class="section-title">Working Papers</h1>
+
+    <div class="research-tabs">
+      <button class="tab-button active" data-target="#working-papers">Working Papers</button>
+      <button class="tab-button" data-target="#publications">Publications</button>
+    </div>
+
+    <h1 class="section-title" id="working-papers">Working Papers</h1>
 
     <div class="research-item">
       <img src="images/mongolie_place.jpeg" alt="mongolie1" />
@@ -225,11 +238,36 @@
       </div>
     </div>
 
-    <h1 class="section-title">Publications</h1>
-    <ul class="publications-list">
-      <li><a href="week1.pdf"  target="_blank">Title of Published Paper 1</a></li>
-      <li><a href="week1.pdf"  target="_blank">This is the second published paper 2</a></li>
-    </ul>
+    <h1 class="section-title" id="publications">Publications</h1>
+
+    <div class="research-item">
+      <img src="images/rdc1.jpeg" alt="rdc1" />
+      <div class="research-text">
+        <h2><a href="week1.pdf" target="_blank">Title of Published Paper 1</a></h2>
+      </div>
+    </div>
+
+    <div class="research-item reverse">
+      <img src="images/rdc1.jpeg" alt="rdc1" />
+      <div class="research-text">
+        <h2><a href="week2.pdf" target="_blank">This is the second published paper 2</a></h2>
+      </div>
+    </div>
+
+    <div class="research-item">
+      <img src="images/rdc1.jpeg" alt="rdc1" />
+      <div class="research-text">
+        <h2><a href="week1.pdf" target="_blank">Title of Published Paper 1</a></h2>
+      </div>
+    </div>
+
+    <div class="research-item reverse">
+      <img src="images/rdc1.jpeg" alt="rdc1" />
+      <div class="research-text">
+        <h2><a href="week2.pdf" target="_blank">This is the second published paper 2</a></h2>
+      </div>
+    </div>
+
   </div>
 
   <footer>
@@ -242,5 +280,45 @@
       <li><a href="mailto:clotaire.boyer@berkeley.edu">clotaire.boyer@berkeley.edu</a></li>
     </ul>
   </footer>
+
+  <script>
+  const buttons = document.querySelectorAll('.tab-button');
+  const sections = {
+    '#working-papers': document.querySelector('#working-papers'),
+    '#publications': document.querySelector('#publications')
+  };
+
+  function activateButton(targetId) {
+    buttons.forEach(b => {
+      if (b.getAttribute('data-target') === targetId) {
+        b.classList.add('active');
+      } else {
+        b.classList.remove('active');
+      }
+    });
+  }
+
+  buttons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const targetElem = document.querySelector(targetId);
+      if (targetElem) {
+        targetElem.scrollIntoView({ behavior: 'smooth' });
+        activateButton(targetId);
+      }
+    });
+  });
+
+  window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY + window.innerHeight / 3;
+
+    if (sections['#publications'].offsetTop <= scrollPos) {
+      activateButton('#publications');
+    } else if (sections['#working-papers'].offsetTop <= scrollPos) {
+      activateButton('#working-papers');
+    }
+  });
+</script>
+
 </body>
 </html>
