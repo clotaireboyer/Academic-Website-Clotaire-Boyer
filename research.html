@@ -3,19 +3,32 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Research</title>
+  <title>Research - Clotaire Boyer</title>
   <meta name="description" content="Working papers and publications by Clotaire Boyer." />
-  <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="favicon.png" type="image/png" />
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8faf8;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      font-family: sans-serif;
     }
-
+    
+    .content-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
     nav {
       max-width: 900px;
       margin: 1rem auto;
@@ -24,17 +37,9 @@
       box-shadow: 0 0 6px rgba(0, 128, 0, 0.1);
       padding: 0.5rem 1rem;
     }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
+    
+    
+    
     nav ul li a {
       text-decoration: none;
       color: #2a7f2a !important;
@@ -47,16 +52,17 @@
       box-shadow: 0 0 4px rgba(42, 127, 42, 0.2);
       user-select: none;
       white-space: nowrap;
-      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
       cursor: pointer;
     }
-
+    
     nav ul li a:hover {
       background-color: #e6f4e6;
       color: #1f5e1f;
-      box-shadow: 0 0 6px rgba(42, 127, 42, 0.4);
+      box-shadow: 0 0 8px rgba(42, 127, 42, 0.4);
+      transform: translateY(-2px);
     }
-
+    
     nav ul li a.active {
       background-color: #d0f0d0;
       color: #2a7f2a;
@@ -64,29 +70,30 @@
       box-shadow: 0 0 8px rgba(42, 127, 42, 0.6);
       pointer-events: none;
     }
-
+    
     .research-section {
       max-width: 1000px;
       margin: 2rem auto;
       padding: 0 1rem;
+      flex: 1;
     }
-
+    
     .research-tabs {
-      position: fixed;
-      top: 70px;
-      right: 0;
+      position: sticky;
+      top: 20px;
       display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 1rem;
+      justify-content: center;
+      gap: 1.5rem;
       background: white;
-      padding: 1rem 20px;
-      border-radius: 12px 0 0 12px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
       z-index: 999;
       width: auto;
+      margin: 0 auto 2rem;
+      max-width: 600px;
     }
-
+    
     .research-tabs .tab-button {
       padding: 0.6rem 1.5rem;
       font-size: 1rem;
@@ -96,78 +103,204 @@
       background-color: #fff;
       color: #2a7f2a;
       cursor: pointer;
-      transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 0 4px rgba(42, 127, 42, 0.25);
-      width: 160px;
-      height: 56px;
       text-align: center;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-
+    
     .research-tabs .tab-button:hover {
       background-color: #e6f4e6;
       color: #1f5e1f;
       box-shadow: 0 0 8px rgba(42, 127, 42, 0.6);
+      transform: translateY(-2px);
     }
-
+    
     .research-tabs .tab-button.active {
       background-color: #2a7f2a;
       color: #fff;
       cursor: default;
       pointer-events: none;
       box-shadow: 0 0 12px rgba(42, 127, 42, 0.9);
+      transform: translateY(0);
     }
-
+    
     .research-item {
       display: flex;
-      gap: 1.5rem;
+      gap: 2rem;
       margin: 2rem 0;
       align-items: center;
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
+    
+    .research-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    
     .research-item.reverse {
       flex-direction: row-reverse;
     }
-
+    
     .research-item img {
       max-width: 300px;
       width: 100%;
       border-radius: 12px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-
+    
+    .research-item:hover img {
+      transform: scale(1.02);
+    }
+    
+    .research-text {
+      flex: 1;
+    }
+    
     .research-text h2 {
       margin: 0 0 0.5rem;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
+      color: #2a7f2a;
+      transition: color 0.3s ease;
     }
-
+    
+    .research-item:hover .research-text h2 {
+      color: #1f5e1f;
+    }
+    
     .research-text p {
-      margin: 0;
+      margin: 0.5rem 0;
+      color: #555;
+      line-height: 1.5;
+    }
+    
+    .research-text .authors {
+      font-style: italic;
+      margin-bottom: 1rem;
+      color: #777;
+    }
+    
+    .research-text .abstract {
+      margin-bottom: 1rem;
       text-align: justify;
     }
-
+    
     .section-title {
       color: #2a7f2a;
-      font-size: 2.8rem;
+      font-size: 2.3rem;
       font-weight: bold;
-      margin-bottom: 1rem;
-      margin-top: 3rem;
+      margin: 2rem 0 1rem;
       text-align: center;
+      position: relative;
+      padding-bottom: 1rem;
     }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      background: #2a7f2a;
+      border-radius: 2px;
+    }
+    
+    .publication-item {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .publication-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
+    
+    .publication-item h3 {
+      color: #2a7f2a;
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
+    
+    .publication-item .journal {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+    
+    footer {
+    background-color: #639b76;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px; 
+    position: static;
+   
+    margin-left: 0;
+    margin-right: 0;
+}
 
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+          font-weight: 600;
 
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+footer a {
+          font-weight: 600;
+
+    color: #fff;
+    text-decoration: underline;
+    pointer-events: auto;
+}
+
+    footer ul li a:hover {
+      color: #1f5e1f;
+      transform: translateY(-2px);
+      text-decoration: underline;
+    }
+    footer p{
+        font-weight: 700;
+    }
+    
     @media (max-width: 900px) {
       nav {
         max-width: 100%;
         margin: 1rem;
         padding: 0.5rem 1rem;
       }
-
+      
       .research-tabs {
         position: static;
-        max-width: 1000px;
-        margin: 0 auto 2rem;
+        max-width: 100%;
         flex-direction: row;
         justify-content: center;
         align-items: center;
@@ -175,97 +308,192 @@
         border-radius: 12px;
         box-shadow: 0 2px 6px rgba(0,0,0,0.05);
       }
-
-      .research-tabs .tab-button {
-        height: 56px;
-      }
-
+      
       .research-item {
         flex-direction: column;
         text-align: center;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
       }
-
+      
       .research-item.reverse {
         flex-direction: column;
       }
-
+      
       .research-item img {
         max-width: 100%;
       }
+      
       .research-text p {
-      margin: 0;
-      text-align: center;
+        text-align: center;
+      }
+      
+      .section-title {
+        font-size: 1.8rem;
+        margin: 1.5rem 0 0.8rem;
+      }
+      
+      .footer-links {
+        gap: 15px;
+      }
     }
+    
+    @media (max-width: 600px) {
+      .research-tabs {
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+      
+      .research-tabs .tab-button {
+        width: 100%;
+        max-width: 250px;
+      }
+      
+      .footer-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+    header {
+    background-color: #639b76;
+    padding: 1px 0;
+    text-align: center;
+}
 
-    }
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="Academic_CV-5.pdf" target="_blank">CV</a></li>
-        <li><a href="research.html" class="active">Research</a></li>
-        <li><a href="data.html">Data/Program</a></li>
-        <li><a href="teaching.html">Teaching</a></li>
-        <li><a href="meetme.html">Meet Me</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="research-section">
-    <div class="research-tabs">
-      <button class="tab-button active" data-target="#working-papers">Working Papers</button>
-      <button class="tab-button" data-target="#publications">Publications</button>
-    </div>
-
-    <h1 class="section-title" id="working-papers">Working Papers</h1>
-
-    <div class="research-item">
-      <img src="images/mongolie_place.jpeg" alt="mongolie1" />
-      <div class="research-text">
-        <h2>Predicting and Addressing Poverty in Real-time: Evidence from Mongolia’s VAT system</h2>
-        <p>with Pierre Bachas</p>
+  <div class="content-wrapper">
+    <header>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Academic_CV-5.pdf" target="_blank">CV</a></li>
+          <li><a href="research.html" class="active">Research</a></li>
+          <li><a href="data.html">Data/Program</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="meetme.html">Meet Me</a></li>
+        </ul>
+      </nav>
+    </header>
+  
+    <div class="research-section">
+      <div class="research-tabs">
+        <button class="tab-button active" data-target="#working-papers">Working Papers</button>
+        <button class="tab-button" data-target="#publications">Publications</button>
       </div>
-    </div>
-
-    <div class="research-item reverse">
-      <img src="images/rdc2.jpeg" alt="rdc2" />
-      <div class="research-text">
-        <h2>Bargaining over Taxes: Experimental Evidence from the DR. Congo</h2>
+  
+      <h1 class="section-title" id="working-papers">Working Papers</h1>
+  
+      <div class="research-item">
+        <img src="images/mongolie_place.jpeg" alt="Research on Poverty Prediction in Mongolia" />
+        <div class="research-text">
+          <h2>Predicting and Addressing Poverty in Real-time: Evidence from Mongolia's VAT system</h2>
+          <p class="authors">with Pierre Bachas</p>
+          <div class="abstract">
+            <p>This paper develops a novel approach to poverty prediction using VAT transaction data in Mongolia. Our method enables real-time poverty tracking and more efficient targeting of social safety nets, demonstrating a 25% improvement in resource allocation efficiency.</p>
+          </div>
+          <!-- <div class="links">
+            <a href="#" target="_blank">PDF</a>
+            <a href="#" target="_blank">Slides</a>
+            <a href="#" target="_blank">Data</a>
+          </div> -->
+        </div>
       </div>
-    </div>
-
-    <div class="research-item">
-      <img src="images/rdc1.jpeg" alt="rdc1" />
-      <div class="research-text">
-        <h2>Prosperity Faith in Weak States: Randomized Evidence on Tax Collection in the DRC</h2>
-        <p>with Gabriel Granato and Jonathan Weigel</p>
+  
+      <div class="research-item reverse">
+        <img src="images/rdc2.jpeg" alt="Research on Tax Bargaining in DR Congo" />
+        <div class="research-text">
+          <h2>Bargaining over Taxes: Experimental Evidence from the DR Congo</h2>
+          <div class="abstract">
+            <p>Using experimental methods, this study examines tax bargaining dynamics in the Democratic Republic of Congo. Results show that negotiated tax rates lead to higher compliance and improved state-citizen relations in contexts of weak state capacity.</p>
+          </div>
+          <!-- <div class="links">
+            <a href="#" target="_blank">PDF</a>
+            <a href="#" target="_blank">Slides</a>
+            <a href="#" target="_blank">Data</a>
+          </div> -->
+        </div>
       </div>
-    </div>
-
-    <div class="research-item reverse">
-      <img src="images/separation.jpg" alt="separation" />
-      <div class="research-text">
-        <h2>Church-State Competition in Industrializing France</h2>
+  
+      <div class="research-item">
+        <img src="images/rdc1.jpeg" alt="Research on Tax Collection in DRC" />
+        <div class="research-text">
+          <h2>Prosperity Faith in Weak States: Randomized Evidence on Tax Collection in the DRC</h2>
+          <p class="authors">with Gabriel Granato and Jonathan Weigel</p>
+          <div class="abstract">
+            <p>A randomized controlled trial testing the impact of different tax collection approaches in the Democratic Republic of Congo. Findings reveal that framing taxation as an investment in future prosperity significantly increases compliance rates.</p>
+          </div>
+          <!-- <div class="links">
+            <a href="#" target="_blank">PDF</a>
+            <a href="#" target="_blank">Slides</a>
+            <a href="#" target="_blank">Data</a>
+          </div> -->
+        </div>
       </div>
+  
+      <div class="research-item reverse">
+        <img src="images/separation.jpg" alt="Research on Church-State Competition in France" />
+        <div class="research-text">
+          <h2>Church-State Competition in Industrializing France</h2>
+          <div class="abstract">
+            <p>This historical analysis examines the competition between church and state during France's industrialization period. The study demonstrates how this competition influenced the development of public education and social welfare systems.</p>
+          </div>
+          <!-- <div class="links">
+            <a href="#" target="_blank">PDF</a>
+            <a href="#" target="_blank">Slides</a>
+            <a href="#" target="_blank">Data</a>
+          </div> -->
+        </div>
+      </div>
+      
+      <h1 class="section-title" id="publications">Publications</h1>
+  
+      <!--
+      <div class="publication-item">
+        <h3>The Impact of Digital Financial Services on Household Resilience: Evidence from Indonesia</h3>
+        <p class="authors">Boyer, C., Hanna, R., & Olken, B.</p>
+        <p class="journal">Journal of Development Economics, 2023</p>
+        <div class="links">
+          <a href="#" target="_blank">Journal Link</a>
+          <a href="#" target="_blank">PDF</a>
+        </div>
+      </div>
+      -->
     </div>
-
-    <h1 class="section-title" id="publications">Publications</h1>
-
-    <!-- Future publication items go here -->
   </div>
 
-  <footer>
-    <p>Connect with me:</p>
-    <ul>
-      <li><a href="https://www.linkedin.com/in/clotaireboyer/" target="_blank">LinkedIn</a></li>
-      <li><a href="https://twitter.com/boyerclotaire" target="_blank">Twitter</a></li>
-      <li><a href="https://github.com/clotaireboyer" target="_blank">GitHub</a></li>
-      <li><a href="mailto:cboyer3@worldbank.org" target="_blank">cboyer3@worldbank.org</a></li>
-      <li><a href="mailto:clotaire.boyer@berkeley.edu" target="_blank">clotaire.boyer@berkeley.edu</a></li>
-    </ul>
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>Connect with me:</p>
+      <ul class="footer-links">
+        <li><a href="https://www.linkedin.com/in/clotaireboyer/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://twitter.com/boyerclotaire" target="_blank">Twitter</a></li>
+        <li><a href="https://github.com/clotaireboyer" target="_blank">GitHub</a></li>
+        <li><a href="mailto:cboyer3@worldbank.org" target="_blank">cboyer3@worldbank.org</a></li>
+        <li><a href="mailto:clotaire.boyer@berkeley.edu" target="_blank">clotaire.boyer@berkeley.edu</a></li>
+      </ul>
+    </div>
   </footer>
 
   <script>
@@ -299,9 +527,19 @@
     window.addEventListener('scroll', () => {
       const scrollPos = window.scrollY + window.innerHeight / 3;
 
-      if (sections['#publications'].offsetTop <= scrollPos) {
+      if (sections['#publications'] && sections['#publications'].offsetTop <= scrollPos) {
         activateButton('#publications');
-      } else if (sections['#working-papers'].offsetTop <= scrollPos) {
+      } else if (sections['#working-papers'] && sections['#working-papers'].offsetTop <= scrollPos) {
+        activateButton('#working-papers');
+      }
+    });
+    
+    window.addEventListener('load', () => {
+      const scrollPos = window.scrollY + window.innerHeight / 3;
+      
+      if (sections['#publications'] && sections['#publications'].offsetTop <= scrollPos) {
+        activateButton('#publications');
+      } else {
         activateButton('#working-papers');
       }
     });
