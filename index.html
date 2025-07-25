@@ -182,6 +182,30 @@
     }
 
 
+    .bottom-banner {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  background: #fff;
+}
+
+.bottom-banner img {
+  width: 100%;
+  max-width: 1600px;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+.bottom-banner:hover img{
+        transition: transform 1s ease;
+
+              transform: scale(1.05);
+
+}
 
     @media (max-width: 900px) {
       nav {
@@ -279,6 +303,10 @@
       <img src="images/india1.jpeg" alt="Clotaire Boyer" />
     </div>
   </div>
+  <div class="bottom-banner">
+  <img src="images/fondConferenceClot.jpeg" alt="Banner image">
+</div>
+
 
   <footer>
     <p>Connect with me:</p>
