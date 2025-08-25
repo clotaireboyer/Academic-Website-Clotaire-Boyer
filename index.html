@@ -182,10 +182,8 @@
     }
 
 
-    .bottom-banner {
+ .bottom-banner {
   width: 100%;
-  max-width: 100%;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   background: #fff;
@@ -193,19 +191,24 @@
 
 .bottom-banner img {
   width: 100%;
-  max-width: 1600px;
-  height: auto;
-  display: block;
+  max-width: 1200px;
+  max-height: 300px; 
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 1s ease;
 }
-.bottom-banner:hover img{
-        transition: transform 1s ease;
 
-              transform: scale(1.05);
-
+.bottom-banner:hover img {
+  transform: scale(1.05);
 }
+
+@media (max-width: 768px) {
+  .bottom-banner {
+    display: none;
+  }
+}
+
 
     @media (max-width: 900px) {
       nav {
