@@ -6,317 +6,317 @@
   <title>Research - Clotaire Boyer</title>
   <meta name="description" content="Working papers and publications by Clotaire Boyer." />
   <link rel="icon" href="favicon.png" type="image/png" />
-    <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css" />
 
   <style>
-.content-wrapper {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
+    .content-wrapper {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
 
-nav {
-  max-width: 900px;
-  margin: 1rem auto;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 6px rgba(0, 128, 0, 0.1);
-  padding: 0.5rem 1rem;
-}
+    nav {
+      max-width: 900px;
+      margin: 1rem auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 6px rgba(0, 128, 0, 0.1);
+      padding: 0.5rem 1rem;
+    }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
 
-nav ul li a {
-  text-decoration: none;
-  color: #2a7f2a !important;
-  background-color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  font-weight: 600;
-  display: inline-block;
-  border: 2px solid transparent;
-  box-shadow: 0 0 4px rgba(42, 127, 42, 0.2);
-  user-select: none;
-  white-space: nowrap;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
+    nav ul li a {
+      text-decoration: none;
+      color: #2a7f2a !important;
+      background-color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      display: inline-block;
+      border: 2px solid transparent;
+      box-shadow: 0 0 4px rgba(42, 127, 42, 0.2);
+      user-select: none;
+      white-space: nowrap;
+      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
 
-nav ul li a:hover {
-  background-color: #e6f4e6;
-  color: #1f5e1f;
-  box-shadow: 0 0 8px rgba(42, 127, 42, 0.4);
-  transform: translateY(-2px);
-}
+    nav ul li a:hover {
+      background-color: #e6f4e6;
+      color: #1f5e1f;
+      box-shadow: 0 0 8px rgba(42, 127, 42, 0.4);
+      transform: translateY(-2px);
+    }
 
-nav ul li a.active {
-  background-color: #d0f0d0;
-  color: #2a7f2a;
-  border-color: #2a7f2a;
-  box-shadow: 0 0 8px rgba(42, 127, 42, 0.6);
-  pointer-events: none;
-}
+    nav ul li a.active {
+      background-color: #d0f0d0;
+      color: #2a7f2a;
+      border-color: #2a7f2a;
+      box-shadow: 0 0 8px rgba(42, 127, 42, 0.6);
+      pointer-events: none;
+    }
 
-.research-section {
-  max-width: 1000px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  flex: 1;
-}
+    .research-section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      flex: 1;
+    }
 
-.research-tabs {
-  background: white;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  width: auto;
-  padding: 1rem;
-  z-index: 999;
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  margin: 0 auto 2rem;
-  max-width: 600px;
-  position: sticky;
-  top: 20px;
-  right: auto;
-  left: auto;
-  flex-direction: row;
-  align-items: center;
-}
+    .research-tabs {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      width: auto;
+      padding: 1rem;
+      z-index: 999;
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      margin: 0 auto 2rem;
+      max-width: 600px;
+      position: sticky;
+      top: 20px;
+      right: auto;
+      left: auto;
+      flex-direction: row;
+      align-items: center;
+    }
 
-.research-tabs .tab-button {
-  padding: 0.6rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 750;
-  border-radius: 10px;
-  border: 2px solid #2a7f2a;
-  background-color: #fff;
-  color: #2a7f2a;
-  cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 0 4px rgba(42, 127, 42, 0.25);
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 150px;
-  height: 45px;
-}
+    .research-tabs .tab-button {
+      padding: 0.6rem 1.5rem;
+      font-size: 1rem;
+      font-weight: 750;
+      border-radius: 10px;
+      border: 2px solid #2a7f2a;
+      background-color: #fff;
+      color: #2a7f2a;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 4px rgba(42, 127, 42, 0.25);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 150px;
+      height: 45px;
+    }
 
-.research-tabs .tab-button:hover {
-  background-color: #e6f4e6;
-  color: #1f5e1f;
-  box-shadow: 0 0 8px rgba(42, 127, 42, 0.6);
-  transform: translateY(-2px);
-}
+    .research-tabs .tab-button:hover {
+      background-color: #e6f4e6;
+      color: #1f5e1f;
+      box-shadow: 0 0 8px rgba(42, 127, 42, 0.6);
+      transform: translateY(-2px);
+    }
 
-.research-tabs .tab-button.active {
-  background-color: #2a7f2a;
-  color: #fff;
-  cursor: default;
-  pointer-events: none;
-  box-shadow: 0 0 12px rgba(42, 127, 42, 0.9);
-  transform: translateY(0);
-}
+    .research-tabs .tab-button.active {
+      background-color: #2a7f2a;
+      color: #fff;
+      cursor: default;
+      pointer-events: none;
+      box-shadow: 0 0 12px rgba(42, 127, 42, 0.9);
+      transform: translateY(0);
+    }
 
-.research-item {
-  display: flex;
-  gap: 2rem;
-  margin: 0rem 0;
-  align-items: center;
-  background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .research-item {
+      display: flex;
+      gap: 2rem;
+      margin: 0rem 0;
+      align-items: center;
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.research-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-}
+    .research-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
 
-.research-item.reverse {
-  flex-direction: row-reverse;
-}
+    .research-item.reverse {
+      flex-direction: row-reverse;
+    }
 
-.research-item img {
-  max-width: 300px;
-  width: 100%;
-  border-radius: 12px;
-  transition: transform 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+    .research-item img {
+      max-width: 300px;
+      width: 100%;
+      border-radius: 12px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
 
-.research-item:hover img {
-  transform: scale(1.02);
-}
+    .research-item:hover img {
+      transform: scale(1.02);
+    }
 
-.research-text {
-  flex: 1;
-}
+    .research-text {
+      flex: 1;
+    }
 
-.research-text h2 {
-  margin: 0 0 0.5rem;
-  font-size: 1.5rem;
-  color: #2a7f2a;
-  transition: color 0.3s ease;
-}
+    .research-text h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.5rem;
+      color: #2a7f2a;
+      transition: color 0.3s ease;
+    }
 
-.research-item:hover .research-text h2 {
-  color: #1f5e1f;
-}
+    .research-item:hover .research-text h2 {
+      color: #1f5e1f;
+    }
 
-.research-text p {
-  margin: 0.5rem 0;
-  color: #555;
-  line-height: 1.5;
-}
+    .research-text p {
+      margin: 0.5rem 0;
+      color: #555;
+      line-height: 1.5;
+    }
 
-.research-text .authors {
-  font-style: italic;
-  margin-bottom: 1rem;
-  color: #777;
-}
+    .research-text .authors {
+      font-style: italic;
+      margin-bottom: 1rem;
+      color: #777;
+    }
 
-.research-text .abstract {
-  margin-bottom: 1rem;
-  text-align: justify;
-}
+    .research-text .abstract {
+      margin-bottom: 1rem;
+      text-align: justify;
+    }
 
-.section-title {
-  color: #2a7f2a;
-  font-size: 2.3rem;
-  font-weight: bold;
-  margin: 2rem 0 1rem;
-  text-align: center;
-  position: relative;
-  padding-bottom: 1rem;
-}
+    .section-title {
+      color: #2a7f2a;
+      font-size: 2.3rem;
+      font-weight: bold;
+      margin: 2rem 0 1rem;
+      text-align: center;
+      position: relative;
+      padding-bottom: 1rem;
+    }
 
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 4px;
-  background: #2a7f2a;
-  border-radius: 2px;
-}
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100px;
+      height: 4px;
+      background: #2a7f2a;
+      border-radius: 2px;
+    }
 
-.publication-item {
-  background: white;
-  border-radius: 12px;
-  padding: 1.5rem;
-  margin: 1.5rem 0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+    .publication-item {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-.publication-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-}
+    .publication-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    }
 
-.publication-item h3 {
-  color: #2a7f2a;
-  margin-top: 0;
-  font-size: 1.3rem;
-}
+    .publication-item h3 {
+      color: #2a7f2a;
+      margin-top: 0;
+      font-size: 1.3rem;
+    }
 
-.publication-item .journal {
-  font-style: italic;
-  color: #555;
-  margin-bottom: 1rem;
-}
+    .publication-item .journal {
+      font-style: italic;
+      color: #555;
+      margin-bottom: 1rem;
+    }
 
-@media (min-width: 901px) {
-  .research-tabs {
-    position: fixed;
-    flex-direction: column;
-    align-items: flex-end;
-    max-width: 180px;
-    margin-left: auto;
-    margin-right: 0;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-  }
+    @media (min-width: 901px) {
+      .research-tabs {
+        position: fixed;
+        flex-direction: column;
+        align-items: flex-end;
+        max-width: 180px;
+        margin-left: auto;
+        margin-right: 0;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+      }
 
-  .research-tabs .tab-button {
-    width: 100%;
-    height: 45px;
-    margin-bottom: 0rem;
-  }
+      .research-tabs .tab-button {
+        width: 100%;
+        height: 45px;
+        margin-bottom: 0rem;
+      }
 
-  .section-title#working-papers {
-    margin-top: 0;
-    padding-top: 20px;
-    max-width: calc(1000px - 220px);
-    margin-left: auto;
-    margin-right: auto;
-  }
+      .section-title#working-papers {
+        margin-top: 0;
+        padding-top: 20px;
+        max-width: calc(1000px - 220px);
+        margin-left: auto;
+        margin-right: auto;
+      }
 
-  .research-section {
-    padding-right: 220px;
-  }
-}
+      .research-section {
+        padding-right: 220px;
+      }
+    }
 
-@media (max-width: 900px) and (min-width: 601px) {
-  .research-tabs {
-    position: sticky;
-    top: 20px;
-    flex-direction: row;
-    max-width: 600px;
-    margin: 0 auto 2rem;
-    padding: 1rem;
-    justify-content: center;
-    gap: 1.5rem;
-  }
+    @media (max-width: 900px) and (min-width: 601px) {
+      .research-tabs {
+        position: sticky;
+        top: 20px;
+        flex-direction: row;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+        padding: 1rem;
+        justify-content: center;
+        gap: 1.5rem;
+      }
 
-  .research-tabs .tab-button {
-    width: 150px;
-    height: 45px;
-    margin-bottom: 0;
-  }
+      .research-tabs .tab-button {
+        width: 150px;
+        height: 45px;
+        margin-bottom: 0;
+      }
 
-  .section-title#working-papers {
-    margin-top: 2rem;
-    padding-top: 0;
-    max-width: 1000px;
-  }
+      .section-title#working-papers {
+        margin-top: 2rem;
+        padding-top: 0;
+        max-width: 1000px;
+      }
 
-  .research-section {
-    padding-right: 0;
-  }
-}
+      .research-section {
+        padding-right: 0;
+      }
+    }
 
-@media (max-width: 350px) {
-  .research-tabs {
-    position: sticky;
-    top: 20px;
-    flex-direction: column;
-    gap: 0.8rem;
-    max-width: 250px;
-    margin: 0 auto 2rem;
-  }
+    @media (max-width: 350px) {
+      .research-tabs {
+        position: sticky;
+        top: 20px;
+        flex-direction: column;
+        gap: 0.8rem;
+        max-width: 250px;
+        margin: 0 auto 2rem;
+      }
 
-  .research-tabs .tab-button {
-    width: 100%;
-    height: 45px;
-    margin-bottom: 0;
-  }
-}
+      .research-tabs .tab-button {
+        width: 100%;
+        height: 45px;
+        margin-bottom: 0;
+      }
+    }
 
   </style>
 </head>
@@ -337,39 +337,29 @@ nav ul li a.active {
   
     <div class="research-section">
       <div class="research-tabs">
-        <button class="tab-button active" data-target="#working-papers">Working Papers</button>
+        <button class="tab-button active" data-target="#working-papers">Working Projects</button>
         <button class="tab-button" data-target="#publications">Publications</button>
       </div>
   
-      <h1 class="section-title" id="working-papers">Working Papers</h1>
+      <h1 class="section-title" id="working-papers">Working Projects</h1>
   
       <div class="research-item">
-        <img src="images/mongolie_place.jpeg" alt="Research on Poverty Prediction in Mongolia" />
-        <div class="research-text">
-          <h2>Targeting with Endogenous Administrative Data </h2>
-          <p class="authors">with Pierre Bachas</p>
-          <div class="abstract">
-          </div>
-          <!-- <div class="links">
-            <a href="#" target="_blank">PDF</a>
-            <a href="#" target="_blank">Slides</a>
-            <a href="#" target="_blank">Data</a>
-          </div> -->
-        </div>
-      </div>
-  
-      <div class="research-item reverse">
         <img src="images/rdc2.jpeg" alt="Research on Tax Bargaining in DR Congo" />
         <div class="research-text">
           <h2>Fiscal Distortions and Community Institutions in Weak States</h2>
           <div class="abstract">
           </div>
-          <!-- <div class="links">
-            <a href="#" target="_blank">PDF</a>
-            <a href="#" target="_blank">Slides</a>
-            <a href="#" target="_blank">Data</a>
-          </div> -->
-        </div>
+          </div>
+      </div>
+
+      <div class="research-item reverse">
+        <img src="images/6845ccde2112c.jpg" alt="Research on Bargaining Taxes in Weak States" />
+        <div class="research-text">
+          <h2>Bargaining Taxes in Weak States</h2>
+          <p class="authors">with Augustin Bergeron, Samuel Kappon, and Jonathan Weigel</p>
+          <div class="abstract">
+          </div>
+          </div>
       </div>
   
       <div class="research-item">
@@ -379,42 +369,31 @@ nav ul li a.active {
           <p class="authors">with Gabriel Granato and Jonathan Weigel</p>
           <div class="abstract">
           </div>
-          <!-- <div class="links">
-            <a href="#" target="_blank">PDF</a>
-            <a href="#" target="_blank">Slides</a>
-            <a href="#" target="_blank">Data</a>
-          </div> -->
-        </div>
+          </div>
       </div>
   
       <div class="research-item reverse">
         <img src="images/separation.jpg" alt="Research on Church-State Competition in France" />
         <div class="research-text">
-          <h2>Governing Against the Incumbent: Institutional Frictions and Spatial Competition in State-Building</h2>
+          <h2>Fixed Maps, Moving Demand: Allocating Personnel under Administrative Capacity Constraints</h2>
           <div class="abstract">
           </div>
-          <!-- <div class="links">
-            <a href="#" target="_blank">PDF</a>
-            <a href="#" target="_blank">Slides</a>
-            <a href="#" target="_blank">Data</a>
-          </div> -->
-        </div>
+          </div>
+      </div>
+      
+      <div class="research-item">
+        <img src="images/mongolie_place.jpeg" alt="Research on Poverty Prediction in Mongolia" />
+        <div class="research-text">
+          <h2>Targeting with Endogenous Administrative Data </h2>
+          <p class="authors">with Pierre Bachas</p>
+          <div class="abstract">
+          </div>
+          </div>
       </div>
       
       <h1 class="section-title" id="publications">Publications</h1>
   
-      <!--
-      <div class="publication-item">
-        <h3>The Impact of Digital Financial Services on Household Resilience: Evidence from Indonesia</h3>
-        <p class="authors">Boyer, C., Hanna, R., & Olken, B.</p>
-        <p class="journal">Journal of Development Economics, 2023</p>
-        <div class="links">
-          <a href="#" target="_blank">Journal Link</a>
-          <a href="#" target="_blank">PDF</a>
-        </div>
       </div>
-      -->
-    </div>
   </div>
 
   <footer class="site-footer">
